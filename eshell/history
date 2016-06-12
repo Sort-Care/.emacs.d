@@ -44,3 +44,9 @@ ls
 ./a,out
 ./a.out
 g++ test.cpp 
+ls
+flex fb_test.l 
+ls
+cc lex.yy.c -ll
+ls
+./a.out

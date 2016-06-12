@@ -21,6 +21,8 @@
 
 ;; git keys
 (global-set-key (kbd "C-c p f") 'counsel-git)
+(global-set-key (kbd "C-c p a") 'counsel-ag)
+(global-set-key (kbd "C-c c l") 'counsel-locate)
 
 ;; org mode
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -31,10 +33,11 @@
 
 (global-set-key (kbd "s-/") 'hippie-expand)
 
+
 ;;reveal-in-osx-finder
 (global-set-key (kbd "C-c z") 'reveal-in-osx-finder)
 
-;;expand-region
+;;expand-region-abbrevs
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;;iedit
@@ -69,6 +72,13 @@
 
 ;;neotree
 (global-set-key [f8] 'neotree-toggle)
+
+;;window movep
+(global-set-key (kbd "C-c w p") 'windmove-up)
+(global-set-key (kbd "C-c w n") 'windmove-down)
+(global-set-key (kbd "C-c w b") 'windmove-left)
+(global-set-key (kbd "C-c w f") 'windmove-right)
+
 
 
 (provide 'init-keybindings)

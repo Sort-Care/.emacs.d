@@ -155,5 +155,8 @@
 (move-lines-binding)
 
 
+;;encoding
+(set-language-environment "UTF-8")
+
 
 (provide 'init-better-defaults)

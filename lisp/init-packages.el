@@ -9,30 +9,38 @@
 
 ;;add whatever packages you want here
 (defvar hudsonjoe/packages '(
-			    company
-			    spacemacs-theme
-			    monokai-theme
-			    hungry-delete
-			    swiper
-			    counsel
-			    smartparens
-			    js2-mode
-			    exec-path-from-shell
-			    popwin
-			    reveal-in-osx-finder
-			    expand-region
-			    iedit
-			    bison-mode
-			    moe-theme
-			    spaceline
-			    org-pomodoro
-			    popwin
-			    swift-mode
-			    web-mode
-			    helm-ag
-			    yasnippet
-			    auto-yasnippet
-			    neotree
+			     ;;special file modes
+			     js2-mode
+			     bison-mode
+			     swift-mode
+			     web-mode
+
+			     
+			     ;;functionalities
+			     company
+			     swiper
+			     counsel
+			     popwin
+			     reveal-in-osx-finder
+			     org-pomodoro
+			     helm-ag
+			     yasnippet
+			     auto-yasnippet
+			     neotree
+			     exec-path-from-shell
+			     which-key
+			     
+			     
+			     ;;edit convenience
+			     hungry-delete
+			     smartparens
+			     expand-region
+			     iedit
+
+			     
+			     ;;theme
+			     monokai-theme
+			     moe-theme	    
 
 	    ) "Default packages")
 
@@ -128,7 +136,8 @@
 ;;
 (require 'neotree)
 
-
+;;
+(which-key-mode 1)
 
 ;;load theme
 ;;(load-theme 'spacemacs-dark t)
