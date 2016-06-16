@@ -34,7 +34,7 @@
 
 ;; recent files
 (recentf-mode 1)
-(setq recentf-max-menu-items 25)
+(setq recentf-max-menu-items 30)
 
 (defadvice show-paren-function (around fix-show-paren-function activate)
   (cond ((looking-at-p "\\s(") ad-do-it)

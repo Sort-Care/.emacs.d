@@ -4,8 +4,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(TeX-engine (quote xetex))
  '(ansi-color-names-vector
    ["#eee8d5" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#839496"])
+ '(cfs--current-profile "profile1" t)
+ '(cfs--profiles-steps (quote (("profile1" . 7))) t)
  '(company-idle-delay 0.1)
  '(company-minimum-prefix-length 1)
  '(compilation-message-face (quote default))

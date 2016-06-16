@@ -1,25 +1,25 @@
 
 ;; ----- smex-history -----
 (
- customize-group
- counsel-locate
- counsel-ag
- counsel-git-grep
- eshell
  company-mode
- hungry-delete-mode
+ cfs-increase-fontsize
+ cfs-decrease-fontsize
+ cfs-edit-profile
+ describe-font
+ cfs-insert-fontname
+ font-lock-mode
 )
 
 ;; ----- smex-data -----
 (
- (customize-group . 24)
+ (customize-group . 28)
  (eshell . 10)
  (exit-minibuffer . 1)
  (quit-window . 1)
  (shell . 1)
  (counsel-git . 1)
  (indent-buffer . 8)
- (package-install . 1)
+ (package-install . 3)
  (load-file . 3)
  (2048-game . 1)
  (org-todo . 1)
@@ -28,17 +28,27 @@
  (hudsonjoe/insert-chrome-current-tab-url . 8)
  (org-pomodoro . 5)
  (indent-region . 2)
- (c++-mode . 2)
+ (c++-mode . 3)
  (hungry-delete-mode . 10)
- (describe-font . 2)
- (flycheck-mode . 2)
+ (describe-font . 8)
+ (flycheck-mode . 5)
  (helm-ag . 1)
  (helm-do-ag . 1)
  (aya-create . 3)
  (aya-expand . 2)
  (set-language-environment . 1)
- (company-mode . 3)
+ (company-mode . 6)
  (counsel-git-grep . 1)
  (counsel-ag . 1)
  (counsel-locate . 1)
+ (replace-string . 1)
+ (goto-line . 1)
+ (web-mode . 1)
+ (goto-address . 1)
+ (cycle-spacing . 1)
+ (font-lock-mode . 2)
+ (cfs-edit-profile . 23)
+ (cfs-insert-fontname . 9)
+ (cfs-increase-fontsize . 5)
+ (cfs-decrease-fontsize . 1)
 )

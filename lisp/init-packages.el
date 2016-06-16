@@ -12,7 +12,7 @@
 			     ;;special file modes
 			     js2-mode
 			     bison-mode
-			     swift-mode
+			     ;;swift-mode
 			     web-mode
 
 			     
@@ -29,7 +29,9 @@
 			     neotree
 			     exec-path-from-shell
 			     which-key
-			     
+			     auctex
+			     company-auctex
+			     chinese-fonts-setup
 			     
 			     ;;edit convenience
 			     hungry-delete
@@ -109,7 +111,7 @@
 (require 'expand-region)
 
 ;;swift mode
-(require 'swift-mode)
+;;(require 'swift-mode)
 
 
 ;;flycheck
@@ -135,6 +137,15 @@
 
 ;;
 (require 'neotree)
+
+;;company-auctex
+(require 'company-auctex)
+(company-auctex-init)
+
+
+;;chinese-fonts-setup
+(require 'chinese-fonts-setup)
+
 
 ;;
 (which-key-mode 1)
