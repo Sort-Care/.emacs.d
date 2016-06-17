@@ -37,7 +37,7 @@
  (aya-create . 3)
  (aya-expand . 2)
  (set-language-environment . 1)
- (company-mode . 6)
+ (company-mode . 7)
  (counsel-git-grep . 1)
  (counsel-ag . 1)
  (counsel-locate . 1)
