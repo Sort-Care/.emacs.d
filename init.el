@@ -19,9 +19,13 @@
 (require 'init-better-defaults)
 (require 'init-org)
 (require 'init-keybindings)
-
+(require 'init-cindent)
 ;;recent file
 (require 'recentf)
+(require 'setup-helm)
+(require 'setup-helm-gtags)
+(require 'setup-ggtags)
+(require 'sr-speedbar)
 ;;============================================
 
 

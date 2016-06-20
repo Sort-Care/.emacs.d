@@ -32,6 +32,11 @@
 			     auctex
 			     company-auctex
 			     chinese-fonts-setup
+			     ag
+			     helm
+				 helm-swoop
+				 helm-gtags
+			     ggtags
 			     
 			     ;;edit convenience
 			     hungry-delete
@@ -115,7 +120,7 @@
 
 
 ;;flycheck
-;;(global-flycheck-mode)
+(global-flycheck-mode)
 
 
 ;;(require 'spaceline-config)
@@ -146,9 +151,15 @@
 ;;chinese-fonts-setup
 (require 'chinese-fonts-setup)
 
+;;ag
+(require 'ag)
 
 ;;
 (which-key-mode 1)
+
+
+;;helm-gtags
+
 
 ;;load theme
 ;;(load-theme 'spacemacs-dark t)

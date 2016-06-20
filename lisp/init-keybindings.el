@@ -1,4 +1,6 @@
-;;
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 ;; key bindings settings
 ;;
 
@@ -83,4 +85,8 @@
 (global-set-key (kbd "C-c f i") 'cfs-increase-fontsize)
 (global-set-key (kbd "C-c f d") 'cfs-decrease-fontsize)
 
+
+
 (provide 'init-keybindings)
+
+;;; init-keybindings.el ends here

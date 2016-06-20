@@ -155,8 +155,12 @@
 (move-lines-binding)
 
 
+;;speedbar
+(setq speedbar-show-unknown-files t)
+
 ;;encoding
 (set-language-environment "UTF-8")
 
 
 (provide 'init-better-defaults)
+;;; init-better-defaults.el ends here
