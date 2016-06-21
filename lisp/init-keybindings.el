@@ -62,7 +62,6 @@
 ;;org pomodoro
 (global-set-key (kbd "C-c o p") 'org-pomodoro)
 
-
 ;;helm ag
 (global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
 
@@ -74,6 +73,7 @@
 
 ;;neotree
 (global-set-key [f8] 'neotree-toggle)
+(global-set-key [f9] 'sr-speedbar-toggle)
 
 ;;window movep
 (global-set-key (kbd "C-c w p") 'windmove-up)

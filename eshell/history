@@ -72,3 +72,11 @@ gcc main.c
 gcc main.c
 ./a.out
 gtags
+gtags
+gtags
+etags
+gtags
+gtags
+ls
+gtags
+gtags

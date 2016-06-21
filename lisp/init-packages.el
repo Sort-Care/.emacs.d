@@ -1,70 +1,74 @@
- ;;;packages
+;;  ;;;packages
 
-(when (>= emacs-major-version 24)
-  (package-initialize)
-  (require 'package)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-  )
-(require 'cl)
+;; (when (>= emacs-major-version 24)
+;;   (package-initialize)
+;;   (require 'package)
+;;   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+;;   )
+;; (require 'cl)
 
-;;add whatever packages you want here
-(defvar hudsonjoe/packages '(
-			     ;;special file modes
-			     js2-mode
-			     bison-mode
-			     ;;swift-mode
-			     web-mode
-
-			     
-			     ;;functionalities
-			     company
-			     swiper
-			     counsel
-			     popwin
-			     reveal-in-osx-finder
-			     org-pomodoro
-			     helm-ag
-			     yasnippet
-			     auto-yasnippet
-			     neotree
-			     exec-path-from-shell
-			     which-key
-			     auctex
-			     company-auctex
-			     chinese-fonts-setup
-			     ag
-			     helm
-				 helm-swoop
-				 helm-gtags
-			     ggtags
-			     
-			     ;;edit convenience
-			     hungry-delete
-			     smartparens
-			     expand-region
-			     iedit
+;; ;;add whatever packages you want here
+;; (defvar hudsonjoe/packages '(
+;; 			     ;;special file modes
+;; 			     js2-mode
+;; 			     bison-mode
+;; 			     ;;swift-mode
+;; 			     web-mode
 
 			     
-			     ;;theme
-			     monokai-theme
-			     moe-theme	    
+;; 			     ;;functionalities
+;; 			     company
+;; 			     swiper
+;; 			     counsel
+;; 			     popwin
+;; 			     reveal-in-osx-finder
+;; 			     org-pomodoro
+;; 			     helm-ag
+;; 			     yasnippet
+;; 			     auto-yasnippet
+;; 			     neotree
+;; 			     exec-path-from-shell
+;; 			     which-key
+;; 			     auctex
+;; 			     company-auctex
+;; 			     chinese-fonts-setup
+;; 			     ag
+;; 			     helm
+;; 				 helm-swoop
+;; 				 helm-gtags
+;; 			     ggtags
+;; 				 irony
+;; 				 company-irony
+;; 				 cask
+;; 				 pallet
+			     
+;; 			     ;;edit convenience
+;; 			     hungry-delete
+;; 			     smartparens
+;; 			     expand-region
+;; 			     iedit
 
-	    ) "Default packages")
+			     
+;; 			     ;;theme
+;; 			     monokai-theme
+;; 			     moe-theme	    
 
-(setq package-selected-packages hudsonjoe/packages)
+;; 	    ) "Default packages")
 
-(defun hudsonjoe/packages-installed-p ()
-  (loop for pkg in hudsonjoe/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
+;; (setq package-selected-packages hudsonjoe/packages)
 
-(unless (hudsonjoe/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg hudsonjoe/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg)))
-  )
+;; (defun hudsonjoe/packages-installed-p ()
+;;   (loop for pkg in hudsonjoe/packages
+;; 	when (not (package-installed-p pkg)) do (return nil)
+;; 	finally (return t)))
+
+;; (unless (hudsonjoe/packages-installed-p)
+;;   (message "%s" "Refreshing package database...")
+;;   (package-refresh-contents)
+;;   (dolist (pkg hudsonjoe/packages)
+;;     (when (not (package-installed-p pkg))
+;;       (package-install pkg)))
+;;   )
 
 
 
@@ -105,6 +109,8 @@
 
 ;;global company mode activation
 (global-company-mode t)
+
+
 
 
 (require 'org-pomodoro)
@@ -157,8 +163,33 @@
 ;;
 (which-key-mode 1)
 
+;;undo tree
+(global-undo-tree-mode)
 
-;;helm-gtags
+;;irony
+(require 'irony)
+(require 'irony-cdb)
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+;;
+(require 'company-irony)
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-irony))
+
+
+;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; irony-mode's buffers by irony-mode's function
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map [remap completion-at-point]
+    'irony-completion-at-point-async)
+  (define-key irony-mode-map [remap complete-symbol]
+    'irony-completion-at-point-async))
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
+
 
 
 ;;load theme
